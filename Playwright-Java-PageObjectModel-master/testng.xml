@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Add product to cart" thread-count="5"
+	parallel="tests" verbose="4">
+
+	<listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+
+	</listeners>
+
+	<test name="swag labs home page test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.opencart.tests.HomePageTest" />
+		</classes>
+	</test>
+
+	<test name="Swag Labs login page test">
+		<parameter name="browser" value="chromium" />
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test>
+		<test name="Swag Labs shopping cart page tests">
+		<parameter name="browser" value="chromium" />
+		<classes>
+			<class name="com.qa.opencart.tests.ShoppingCartTest" />
+		</classes>
+	</test>
+
+
+	<!-- <test name="Open Cart Home Page Test_chromium">
+		<parameter name="browser" value="chromium" />
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test> -->
+
+	<!-- <test name="Open Cart Login Page Test_edge1">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test> -->
+
+
+
+
+</suite>
